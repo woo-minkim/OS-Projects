@@ -1,46 +1,46 @@
-# Pintos 프로젝트 정리본 (Phase 1~4)
+# Pintos Projects
 
-이 저장소는 Pintos 과제 진행 결과를 `phase 1`부터 `phase 4`까지 단계별로 정리한 버전입니다.  
-각 phase는 같은 폴더 규칙을 따르며, 코드(`src`)와 대표 보고서(`document.docx`)를 바로 확인할 수 있도록 구성했습니다.
+Pintos 기반 운영체제 프로젝트를 단계별로 정리한 저장소입니다.  
+기본 스레드 실행 구조부터 사용자 프로그램, 시스템콜, 스케줄링, 가상 메모리까지 **운영체제의 핵심 기능을 Phase 1~4에 걸쳐 확장 구현한 결과**를 담고 있습니다.
 
-## 공통 폴더 규칙
+## Overview
 
-`phase 1`~`phase 4`의 최상위에는 아래 4개만 둡니다.
+이 저장소는 Pintos 과제를 4개 Phase로 나누어 정리한 프로젝트 모음입니다.  
+각 Phase는 이전 단계의 기능을 바탕으로 운영체제의 주요 기능을 점진적으로 확장하는 방식으로 구성되어 있습니다.
 
-- `src/`: 해당 phase 코드
-- `document.docx`: 해당 phase 대표 보고서
-- `addition/`: 참고자료, 압축본, 부가 문서, 임시/원본 자료
-- `README.md`: 해당 phase 설명
+- **Phase 1**: 기본 스레드 실행 구조와 사용자 프로그램 실행 기반
+- **Phase 2**: 시스템콜 확장과 파일 디스크립터 관리
+- **Phase 3**: Alarm Clock, Priority Scheduling, MLFQS 등 스케줄러 구현
+- **Phase 4**: Lazy Loading, Page Fault Handling, Stack Growth, Swap 기반 가상 메모리 구현
 
-## Phase 요약
+## Phase Navigation
 
-- `phase 1`: Threads 기초(스케줄링/동기화 기반) 단계 코드
-- `phase 2`: User Program 및 System Call 확장 단계 코드
-- `phase 3`: File System 기능 확장 단계 코드
-- `phase 4`: Virtual Memory 확장 단계 코드
+- [Phase 1 README](phase%201/README.md)
+- [Phase 2 README](phase%202/README.md)
+- [Phase 3 README](phase%203/README.md)
+- [Phase 4 README](phase%204/README.md)
 
-세부 내용은 각 phase의 `README.md`를 참고하세요.
+## Project Structure
 
-## 정리 원칙
-
-- 압축 파일(`.tar`, `.tar.gz`)에서 필요한 `src`/문서를 확보한 뒤 루트 기준 구조로 정규화
-- 보고서 파일명은 `document.docx`로 통일
-- 그 외 자료(`pdf`, 원본 압축, 보조 문서, 중간 결과물)는 `addition/`으로 이동
-- 코드 내용은 변경하지 않고 파일 구조와 문서화만 재정리
-
-## 빠른 확인 방법
-
-1. `phase n/src`에서 코드 확인
-2. `phase n/document.docx`에서 보고서 확인
-3. `phase n/addition`에서 부가 자료 확인
-
-## 빌드/실행 참고
-
-Pintos 일반 흐름 기준 예시:
-
-```bash
-cd "phase 1/src/threads"
-make
-```
-
-phase별 상세 빌드 위치와 구현 포인트는 각 phase README를 참고하면 됩니다.
+```text
+Pintos Projects/
+├─ phase 1/
+│  ├─ src/
+│  ├─ document.docx
+│  ├─ addition/
+│  └─ README.md
+├─ phase 2/
+│  ├─ src/
+│  ├─ document.docx
+│  ├─ addition/
+│  └─ README.md
+├─ phase 3/
+│  ├─ src/
+│  ├─ document.docx
+│  ├─ addition/
+│  └─ README.md
+└─ phase 4/
+   ├─ src/
+   ├─ document.docx
+   ├─ addition/
+   └─ README.md
